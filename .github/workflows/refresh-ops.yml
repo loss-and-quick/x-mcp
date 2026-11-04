@@ -1,0 +1,51 @@
+name: refresh-ops
+
+on:
+  schedule:
+    # X ships builds continuously; twice a day keeps the drift window short.
+    - cron: "21 5,17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# A scheduled run can overlap a manual dispatch; only one may update the map.
+concurrency:
+  group: refresh-ops-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bunx tsc --noEmit
+      - run: bun run build
+      - run: node --check dist/index.js
+      - run: bun run lint
+      - run: bun test
+      - name: scrape current operation ids
+        run: bun run ops:update
+      - name: commit refreshed ops
+        id: commit
+        run: |
+          git config user.name "ops-bot"
+          git config user.email "ops-bot@users.noreply.github.com"
+          git add src/x/ops.generated.ts
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore(ops): refresh GraphQL query ids $(date -u +%F)"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: push
+        if: steps.commit.outputs.changed == 'true'
+        run: git push origin "HEAD:${GITHUB_REF#refs/heads/}"

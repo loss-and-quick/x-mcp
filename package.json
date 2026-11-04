@@ -1,0 +1,39 @@
+{
+  "name": "x-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server for X (x.com) that drives the web client's internal GraphQL API with a real session",
+  "bin": {
+    "x-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --target=node --outdir=dist",
+    "build:bun": "bun build src/index.ts --target=bun --outdir=dist-bun --minify",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "auth": "bun run src/cli/auth.ts",
+    "ops:update": "bun run scripts/scrape-ops.ts",
+    "ops:check": "bun run scripts/scrape-ops.ts --check",
+    "start": "bun run src/index.ts",
+    "start:node": "node --experimental-strip-types --no-warnings src/index.ts",
+    "start:dist": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "axios": "^1.21.0",
+    "x-client-transaction-id": "^0.3.3",
+    "zod": "^4.6.7"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.5",
+    "@types/bun": "latest",
+    "typescript": "^7.0.2"
+  }
+}

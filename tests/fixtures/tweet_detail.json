@@ -1,0 +1,230 @@
+{
+  "data": {
+    "threaded_conversation_with_injections_v2": {
+      "instructions": [
+        {
+          "type": "TimelineAddEntries",
+          "entries": [
+            {
+              "entryId": "tweet-2118079600697737577",
+              "content": {
+                "entryType": "TimelineTimelineItem",
+                "__typename": "TimelineTimelineItem",
+                "itemContent": {
+                  "itemType": "TimelineTweet",
+                  "tweet_results": {
+                    "result": {
+                      "__typename": "Tweet",
+                      "rest_id": "2118079600697737577",
+                      "core": {
+                        "user_results": {
+                          "result": {
+                            "__typename": "User",
+                            "rest_id": "2072236976707624961",
+                            "id": "VXNlcjoyMDcyMjM2OTc2NzA3NjI0OTYx",
+                            "core": {
+                              "created_at": "Wed Jul 01 08:34:19 +0000 2026",
+                              "name": "TechCulture",
+                              "screen_name": "Lifeoflinee"
+                            },
+                            "avatar": {
+                              "image_url": "https://pbs.twimg.com/profile_images/2114740044976054273/rsJ-n8gK_normal.jpg"
+                            },
+                            "banner": {
+                              "image_url": "https://pbs.twimg.com/profile_banners/2072236976707624961/1793028292"
+                            },
+                            "profile_bio": {
+                              "description": "Not just news, it's the culture of the future.🛰️",
+                              "entities": {
+                                "description": {}
+                              }
+                            },
+                            "location": {
+                              "location": ""
+                            },
+                            "relationship_counts": {
+                              "followers": 3928,
+                              "following": 3629
+                            },
+                            "tweet_counts": {
+                              "media_tweets": 109,
+                              "tweets": 127
+                            },
+                            "website": {
+                              "url": ""
+                            },
+                            "verification": {
+                              "verified": false
+                            },
+                            "is_blue_verified": true
+                          }
+                        }
+                      },
+                      "views": {
+                        "count": "28",
+                        "state": "EnabledWithCount"
+                      },
+                      "legacy": {
+                        "bookmark_count": 6,
+                        "conversation_id_str": "2118079600697737577",
+                        "created_at": "Wed Nov 04 20:35:03 +0000 2026",
+                        "entities": {
+                          "media": [
+                            {
+                              "type": "photo",
+                              "media_url_https": "https://pbs.twimg.com/media/HWTuKGuWkAAzppX.jpg",
+                              "original_info": {
+                                "width": 1280,
+                                "height": 854
+                              }
+                            }
+                          ]
+                        },
+                        "extended_entities": {
+                          "media": [
+                            {
+                              "type": "photo",
+                              "media_url_https": "https://pbs.twimg.com/media/HWTuKGuWkAAzppX.jpg",
+                              "original_info": {
+                                "width": 1280,
+                                "height": 854
+                              }
+                            }
+                          ]
+                        },
+                        "favorite_count": 7,
+                        "full_text": "OpenAI raised under $15 billion in its latest round, valuing the ChatGPT maker at $1.25 trillion—well short of the $1.4 trillion it was targeting. The shortfall may temper its aggressive growth plans. (via Technology - WSJcom) https://t.co/6LH0peJ5kI",
+                        "id_str": "2118079600697737577",
+                        "is_quote_status": false,
+                        "lang": "en",
+                        "quote_count": 4,
+                        "reply_count": 0,
+                        "retweet_count": 4
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "entryId": "tweetdetailrelatedtweets-2117674799027954166",
+              "content": {
+                "entryType": "TimelineTimelineModule",
+                "__typename": "TimelineTimelineModule",
+                "items": [
+                  {
+                    "entryId": "tweetdetailrelatedtweets-2117674799027954166-tweet-2117674799027954166",
+                    "item": {
+                      "itemContent": {
+                        "itemType": "TimelineTweet",
+                        "tweet_results": {
+                          "result": {
+                            "__typename": "Tweet",
+                            "rest_id": "2117674799027954166",
+                            "core": {
+                              "user_results": {
+                                "result": {
+                                  "__typename": "User",
+                                  "rest_id": "2072236976707624961",
+                                  "id": "VXNlcjoyMDcyMjM2OTc2NzA3NjI0OTYx",
+                                  "core": {
+                                    "created_at": "Wed Jul 01 08:34:19 +0000 2026",
+                                    "name": "TechCulture",
+                                    "screen_name": "Lifeoflinee"
+                                  },
+                                  "avatar": {
+                                    "image_url": "https://pbs.twimg.com/profile_images/2114740044976054273/rsJ-n8gK_normal.jpg"
+                                  },
+                                  "banner": {
+                                    "image_url": "https://pbs.twimg.com/profile_banners/2072236976707624961/1793028292"
+                                  },
+                                  "profile_bio": {
+                                    "description": "Not just news, it's the culture of the future.🛰️",
+                                    "entities": {
+                                      "description": {}
+                                    }
+                                  },
+                                  "location": {
+                                    "location": ""
+                                  },
+                                  "relationship_counts": {
+                                    "followers": 3928,
+                                    "following": 3629
+                                  },
+                                  "tweet_counts": {
+                                    "media_tweets": 109,
+                                    "tweets": 127
+                                  },
+                                  "website": {
+                                    "url": ""
+                                  },
+                                  "verification": {
+                                    "verified": false
+                                  },
+                                  "is_blue_verified": true
+                                }
+                              }
+                            },
+                            "views": {
+                              "count": "309",
+                              "state": "EnabledWithCount"
+                            },
+                            "legacy": {
+                              "bookmark_count": 9,
+                              "conversation_id_str": "2117674799027954166",
+                              "created_at": "Tue Nov 03 17:46:31 +0000 2026",
+                              "entities": {
+                                "media": [
+                                  {
+                                    "type": "photo",
+                                    "media_url_https": "https://pbs.twimg.com/media/HWN9_zmWwAAohOg.jpg",
+                                    "original_info": {
+                                      "width": 2078,
+                                      "height": 2560
+                                    }
+                                  }
+                                ]
+                              },
+                              "extended_entities": {
+                                "media": [
+                                  {
+                                    "type": "photo",
+                                    "media_url_https": "https://pbs.twimg.com/media/HWN9_zmWwAAohOg.jpg",
+                                    "original_info": {
+                                      "width": 2078,
+                                      "height": 2560
+                                    }
+                                  }
+                                ]
+                              },
+                              "favorite_count": 13,
+                              "full_text": "Google has put its first data‑center satellite into orbit – a TPU running DeepMind’s Gemma‑4 model, now generating poetry from space. The experiment shows AI workloads can be hosted off‑planet, opening new frontiers for compute. (via TechCrunch) https://t.co/P80WfHBlkA",
+                              "id_str": "2117674799027954166",
+                              "is_quote_status": false,
+                              "lang": "en",
+                              "quote_count": 4,
+                              "reply_count": 0,
+                              "retweet_count": 7
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "entryId": "cursor-bottom-2118082709484994549",
+              "content": {
+                "entryType": "TimelineTimelineCursor",
+                "cursorType": "Bottom",
+                "value": "CURSOR_VALUE"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
